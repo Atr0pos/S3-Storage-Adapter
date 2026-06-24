@@ -1,0 +1,2 @@
+lint: 
+	yarn lint
