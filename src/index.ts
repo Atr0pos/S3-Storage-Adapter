@@ -2,6 +2,9 @@
  * Public entry point for the S3 storage adapter package.
  */
 
+import { S3StorageAdapter } from './s3StorageAdapter.js';
+export { S3StorageAdapter };
+
 export interface StorageAdapter {
     generateSignedUploadUrl(
         storageKey: string,
