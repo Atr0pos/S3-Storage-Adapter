@@ -1,48 +1,52 @@
 {
-  "name": "s3-storage-adapter",
-  "version": "0.0.0",
-  "description": "A TypeScript implementation of a storage adapter.",
-  "license": "MIT",
-  "type": "module",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js"
+    "name": "s3-storage-adapter",
+    "version": "0.0.0",
+    "description": "A TypeScript implementation of a storage adapter.",
+    "license": "MIT",
+    "author": {
+        "email": "piers.brady@bonsai-dynamics.co.uk",
+        "url": "https://github.com/Atr0pos"
+    },
+    "type": "module",
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.js"
+        }
+    },
+    "files": [
+        "dist"
+    ],
+    "sideEffects": false,
+    "scripts": {
+        "build": "tsc",
+        "test": "vitest run",
+        "test:watch": "vitest",
+        "clean": "rm -rf dist",
+        "typecheck": "tsc --noEmit",
+        "lint": "eslint ./src",
+        "lint:fix": "eslint . --fix",
+        "format": "prettier --write .",
+        "format:check": "prettier --check .",
+        "prepublishOnly": "yarn clean && yarn build"
+    },
+    "packageManager": "yarn@4.17.0",
+    "devDependencies": {
+        "@eslint/js": "^10.0.1",
+        "@types/node": "^26.0.0",
+        "aws-sdk-client-mock": "^4.1.0",
+        "aws-sdk-client-mock-jest": "^4.1.0",
+        "eslint": "^10.5.0",
+        "eslint-config-prettier": "^10.1.8",
+        "prettier": "^3.8.4",
+        "typescript": "^6.0.3",
+        "typescript-eslint": "^8.62.0",
+        "vitest": "^4.1.9"
+    },
+    "dependencies": {
+        "@aws-sdk/client-s3": "^3.1075.0",
+        "@aws-sdk/s3-request-presigner": "^3.1075.0"
     }
-  },
-  "files": [
-    "dist"
-  ],
-  "sideEffects": false,
-  "scripts": {
-    "build": "tsc",
-    "test": "vitest run",
-    "test:watch": "vitest",
-    "clean": "rm -rf dist",
-    "typecheck": "tsc --noEmit",
-    "lint": "eslint ./src",
-    "lint:fix": "eslint . --fix",
-    "format": "prettier --write .",
-    "format:check": "prettier --check .",
-    "prepublishOnly": "yarn clean && yarn build"
-  },
-  "packageManager": "yarn@4.17.0",
-  "devDependencies": {
-    "@eslint/js": "^10.0.1",
-    "@types/node": "^26.0.0",
-    "aws-sdk-client-mock": "^4.1.0",
-    "aws-sdk-client-mock-jest": "^4.1.0",
-    "eslint": "^10.5.0",
-    "eslint-config-prettier": "^10.1.8",
-    "prettier": "^3.8.4",
-    "typescript": "^6.0.3",
-    "typescript-eslint": "^8.62.0",
-    "vitest": "^4.1.9"
-  },
-  "dependencies": {
-    "@aws-sdk/client-s3": "^3.1075.0",
-    "@aws-sdk/s3-request-presigner": "^3.1075.0"
-  }
 }
