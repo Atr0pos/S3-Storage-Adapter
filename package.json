@@ -21,7 +21,7 @@
     ],
     "sideEffects": false,
     "scripts": {
-        "build": "tsc",
+        "build": "tsc -p tsconfig.build.json",
         "test": "vitest run",
         "test:watch": "vitest",
         "clean": "rm -rf dist",
@@ -30,7 +30,7 @@
         "lint:fix": "eslint . --fix",
         "format": "prettier --write .",
         "format:check": "prettier --check .",
-        "prepublishOnly": "yarn clean && yarn build"
+        "prepack": "yarn clean && yarn build"
     },
     "packageManager": "yarn@4.17.0",
     "devDependencies": {
@@ -47,6 +47,7 @@
     },
     "dependencies": {
         "@aws-sdk/client-s3": "^3.1075.0",
-        "@aws-sdk/s3-request-presigner": "^3.1075.0"
+        "@aws-sdk/s3-request-presigner": "^3.1075.0",
+        "s3-storage-adapter": "^0.0.0"
     }
 }

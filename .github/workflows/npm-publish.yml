@@ -30,6 +30,7 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - run: corepack enable
       - run: yarn install --immutable
+      - run: yarn build
       - run: yarn npm publish
         env:
           YARN_NPM_AUTH_TOKEN: ${{secrets.npm_token}}
