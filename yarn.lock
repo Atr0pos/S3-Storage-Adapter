@@ -2359,7 +2359,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"s3-storage-adapter@npm:^0.0.0, s3-storage-adapter@workspace:.":
+"s3-storage-adapter@workspace:.":
   version: 0.0.0-use.local
   resolution: "s3-storage-adapter@workspace:."
   dependencies:
@@ -2372,7 +2372,6 @@ __metadata:
     eslint: "npm:^10.5.0"
     eslint-config-prettier: "npm:^10.1.8"
     prettier: "npm:^3.8.4"
-    s3-storage-adapter: "npm:^0.0.0"
     typescript: "npm:^6.0.3"
     typescript-eslint: "npm:^8.62.0"
     vitest: "npm:^4.1.9"
