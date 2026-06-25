@@ -1,6 +1,6 @@
 {
     "name": "s3-storage-adapter",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A TypeScript implementation of a storage adapter.",
     "license": "MIT",
     "author": {
